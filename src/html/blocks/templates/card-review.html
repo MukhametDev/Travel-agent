@@ -1,0 +1,25 @@
+<div class="swiper-slide" id="slide">
+    <div class="card-review">
+        <div class="card-review__rating">
+            @@for (var i = 0; i < context.star; i++) { <img class="card-review__icon"
+                src="./../../../img/discover/star-small.svg" alt="star">
+                }
+                @@if(context.star < 5){ @@for (var i=0; i < 5 - context.star; i++) { <img class="card-review__icon"
+                    src="./../../../img/testimonials/star-diss.svg" alt="star">
+                    }
+                    }
+        </div>
+        <p class="card-review__text">
+            @@text
+        </p>
+        <div class="card-review__author">
+            <div class="card-review__img">
+                <img src="./img/testimonials/@@image" alt="Photo">
+            </div>
+            <div class="card-review__title">
+                <div class="card-review__name">@@name</div>
+                <div class="card-review__role">@@role</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+[class*= "__container"] {
+	padding: 0 var(--container-padding);
+	max-width: var(--container-width);
+	margin: 0 auto;
+}
+
+[class *= "__con-right"] {
+	/* overflow-x: hidden; */
+	padding-left: calc(
+		(100% - var(--container-width)) / 2 + var(--container-padding)
+	);
+
+	@include mediaMobile{
+		padding-left: var(--container-padding);
+	}
+	// @media (max-width: var(--)) {
+		
+	// }
+}
+
+.container-left {
+	/* overflow-x: hidden; */
+	padding-right: calc(
+		(100% - var(--container-width)) / 2 + var(--container-padding)
+	);
+
+	@media (max-width: var(--laptop-size)) {
+		padding-right: var(--container-padding);
+	}
+}
